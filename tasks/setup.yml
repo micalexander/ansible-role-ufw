@@ -1,0 +1,16 @@
+---
+- name: set to deny incoming requests by default
+  ufw:
+    policy: deny
+- name: open ports
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+    proto: tcp
+  with_items:
+    "{{ allow_tcp_ports }}"
+  when: allow_tcp_ports is defined
+- name: turn on UFW
+  ufw:
+    state: enabled
+

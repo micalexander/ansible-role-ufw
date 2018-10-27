@@ -1,0 +1,3 @@
+---
+# tasks file for ufw
+- import_tasks: setup.yml

@@ -1,0 +1,3 @@
+---
+# defaults file for ufw
+allow_tcp_ports: []
